@@ -26,3 +26,5 @@ I am Simple Rename Bot!😌</b>
 <b>Library:</b> [Pyrogram 1.1.13](https://docs.pyrogram.org/)
 <b>Updates:</b> [vk projects](https://t.me/VkProjects)
 <b>Server:</b> [Heroku](https://heroku.com)"""
+    FORCE_SUBSCRIBE_TEXT = "<code>Sorry Dear You Must Join My Updates Channel for using me 😌😉....</code>"
+    SOMETHING_WRONG = "<code>Something Wrong. Try again.</code>"
