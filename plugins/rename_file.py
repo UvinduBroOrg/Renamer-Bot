@@ -5,16 +5,22 @@ logger = logging.getLogger(__name__)
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 import os
+import re
+import json
+import math
 import time
+import shutil
+import random
+import ffmpeg
 import asyncio
-import pyrogram
+import requests
 
 if bool(os.environ.get("WEBHOOK", False)):
     from sample_config import Config
 else:
     from config import Config
 
-from script import script
+from script import Script
 
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ForceReply
@@ -26,7 +32,7 @@ from hachoir.parser import createParser
 
 from PIL import Image
 from database.database import *
-
+from datetime import datetime
 
 async def force_name(bot, message):
 
