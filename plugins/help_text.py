@@ -36,6 +36,17 @@ def help_user(bot, update):
         reply_to_message_id=update.message_id
     )
 
+@Client.on_message(filters.command(["about"]))
+def about(bot, update):
+    bot.send_message(
+        chat_id=update.chat.id,
+        text=script.ABOUT_ME,
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Report Bug 🐞", url="https://t.me/VkP_BOTS")]]),
+        parse_mode="html",
+        disable_web_page_preview=True,
+        reply_to_message_id=update.message_id
+    )
+
 
 @Client.on_message(filters.command(["start"]))
 def send_start(bot, update):
