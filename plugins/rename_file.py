@@ -11,7 +11,6 @@ import math
 import time
 import shutil
 import random
-import ffmpeg
 import asyncio
 import requests
 
