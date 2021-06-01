@@ -47,7 +47,7 @@ async def cus_name(bot, message):
               await bot.edit_message_text(text=Translation.BANNED_USER_TEXT, message_id=fmsg.message_id)
               return
         except UserNotParticipant:
-            await bot.edit_message_text(chat_id=update.chat.id, text=script.FORCE_SUBSCRIBE_TEXT, message_id=fmsg.message_id, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😎 Join Channel 😎", url=f"https://telegram.me/{Config.UPDATE_CHANNEL}")]]))
+            await bot.edit_message_text(chat_id=update.chat.id, text=script.FORCE_SUBSCRIBE_TEXT, message_id=fmsg.message_id, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😎 Join Channel 😎", url=f"https://telegram.me/vkprojects")]]))
             return
         except Exception:
             await bot.edit_message_text(chat_id=update.chat.id, text=script.SOMETHING_WRONG, message_id=fmsg.message_id)
