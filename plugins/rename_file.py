@@ -40,7 +40,18 @@ async def force_name(bot, message):
 
 @Client.on_message(filters.private & filters.reply & filters.text)
 async def cus_name(bot, message):
-    
+    if Config.UPDATE_CHANNEL:
+        try:
+            user = await bot.get_chat_member(Config.UPDATE_CHANNEL, update.chat.id)
+            if user.status == "kicked":
+              await bot.edit_message_text(text=Translation.BANNED_USER_TEXT, message_id=fmsg.message_id)
+              return
+        except UserNotParticipant:
+            await bot.edit_message_text(chat_id=update.chat.id, text=Translation.FORCE_SUBSCRIBE_TEXT, message_id=fmsg.message_id, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😎 Join Channel 😎", url=f"https://telegram.me/{Config.UPDATE_CHANNEL}")]]))
+            return
+        except Exception:
+            await bot.edit_message_text(chat_id=update.chat.id, text=Translation.SOMETHING_WRONG, message_id=fmsg.message_id)
+            return
     if (message.reply_to_message.reply_markup) and isinstance(message.reply_to_message.reply_markup, ForceReply):
         asyncio.create_task(rename_doc(bot, message))     
     else:
@@ -184,6 +195,4 @@ async def rename_doc(bot, message):
             text="You're B A N N E D",
             reply_to_message_id=message.message_id
         )
-
-
 
