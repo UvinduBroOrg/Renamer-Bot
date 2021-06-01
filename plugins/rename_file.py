@@ -27,6 +27,8 @@ from hachoir.parser import createParser
 from PIL import Image
 from database.database import *
 
+from config import Config
+
 
 async def force_name(bot, message):
 
@@ -44,7 +46,7 @@ async def cus_name(bot, message):
         try:
             user = await bot.get_chat_member(Config.UPDATE_CHANNEL, update.chat.id)
             if user.status == "kicked":
-              await bot.edit_message_text(text=Translation.BANNED_USER_TEXT, message_id=fmsg.message_id)
+              await bot.edit_message_text(text=script.BANNED_USER_TEXT, message_id=fmsg.message_id)
               return
         except UserNotParticipant:
             await bot.edit_message_text(chat_id=update.chat.id, text=script.FORCE_SUBSCRIBE_TEXT, message_id=fmsg.message_id, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😎 Join Channel 😎", url=f"https://telegram.me/vkprojects")]]))
