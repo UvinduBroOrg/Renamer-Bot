@@ -21,4 +21,8 @@ I am Simple Rename Bot!😌</b>
     
 1. Send me any Telegram File.
 2. Choose appropriate option."""
-    ABOUT_ME = """<b>Meh : \n An Telegram File Renamer Bot Which Can Rename A Telegram Files. \n You Can Set Permanent Thumbnail For The File So You Don't Have To Send Custom Thumbs All The Time.\n Feedback @VKP_BOTS If You Found Meh Useful</b>"""
+    ABOUT_ME = """ <b>Creator:</b> [Vivek](https://t.me/VivekTVP)
+<b>Credits:</b> Dan for his awesome pyrogram library 🔥
+<b>Library:</b> [Pyrogram 1.1.13](https://docs.pyrogram.org/)
+<b>Updates:</b> [vk projects](https://t.me/VkProjects)
+<b>Server:</b> [Heroku](https://heroku.com)"""
