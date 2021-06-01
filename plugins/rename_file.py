@@ -5,25 +5,20 @@ logger = logging.getLogger(__name__)
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 import os
-import re
-import json
-import math
 import time
-import shutil
-import random
 import asyncio
-import requests
+import pyrogram
 
 if bool(os.environ.get("WEBHOOK", False)):
     from sample_config import Config
 else:
     from config import Config
 
-from script import Script
+from script import script
 
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ForceReply
-from pyrogram.errors import UserNotParticipant, UserBannedInChannel
+
 from plugins.helpers import progress_for_pyrogram
 
 from hachoir.metadata import extractMetadata
@@ -31,7 +26,7 @@ from hachoir.parser import createParser
 
 from PIL import Image
 from database.database import *
-from datetime import datetime
+
 
 async def force_name(bot, message):
 
@@ -45,18 +40,7 @@ async def force_name(bot, message):
 
 @Client.on_message(filters.private & filters.reply & filters.text)
 async def cus_name(bot, message):
-    if Config.UPDATE_CHANNEL:
-        try:
-            user = await bot.get_chat_member(Config.UPDATE_CHANNEL, message.chat.id)
-            if user.status == "kicked":
-              await bot.edit_message_text(text=script.BANNED_USER_TEXT, message_id=fmsg.message_id)
-              return
-        except UserNotParticipant:
-            await bot.edit_message_text(chat_id=message.chat.id, text=script.FORCE_SUBSCRIBE_TEXT, message_id=fmsg.message_id, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😎 Join Channel 😎", url=f"https://telegram.me/vkprojects")]]))
-            return
-        except Exception:
-            await bot.edit_message_text(chat_id=message.chat.id, text=script.SOMETHING_WRONG, message_id=fmsg.message_id)
-            return
+    
     if (message.reply_to_message.reply_markup) and isinstance(message.reply_to_message.reply_markup, ForceReply):
         asyncio.create_task(rename_doc(bot, message))     
     else:
@@ -200,4 +184,5 @@ async def rename_doc(bot, message):
             text="You're B A N N E D",
             reply_to_message_id=message.message_id
         )
+
 
