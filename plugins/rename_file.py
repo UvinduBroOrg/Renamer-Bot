@@ -18,7 +18,7 @@ from script import script
 
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ForceReply
-
+from pyrogram.errors import UserNotParticipant, UserBannedInChannel
 from plugins.helpers import progress_for_pyrogram
 
 from hachoir.metadata import extractMetadata
@@ -26,8 +26,6 @@ from hachoir.parser import createParser
 
 from PIL import Image
 from database.database import *
-
-from sample_config import UPDATE_CHANNEL
 
 
 async def force_name(bot, message):
