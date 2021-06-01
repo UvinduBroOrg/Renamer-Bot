@@ -27,7 +27,7 @@ from hachoir.parser import createParser
 from PIL import Image
 from database.database import *
 
-from config import UPDATE_CHANNEL
+from sample_config import UPDATE_CHANNEL
 
 
 async def force_name(bot, message):
