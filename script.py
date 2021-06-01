@@ -1,13 +1,17 @@
 class script(object):
-    START_TEXT = """ A Simple File Renamer Bot With Permanent Thumbnail support!💯
+    START_TEXT = """ <b>Hai {}!!!.
+I am Simple Rename Bot!😌</b>
 
-<b>Send me any Telegram file and choose appropriate option! </b>"""
+<code>You can rename any Telegram Document, using this bot! With Permenant Thumbnail</code>
+
+<b>» You Must Join My Updates Channel for using me</b>
+"""
 
     RENAME_403_ERR = "What Are You Doing? You are Banned"
-    UPGRADE_TEXT = "CONTACT @prgofficial"
+    UPGRADE_TEXT = "ITs A Free Servies"
     DOWNLOAD_START = "Give Me Some Time..."
     UPLOAD_START = "Starting to upload..."
-    AFTER_SUCCESSFUL_UPLOAD_MSG = "**Thank you for Using Me > ©  @prgofficial **"
+    AFTER_SUCCESSFUL_UPLOAD_MSG = "**Thank you for Using Me > ©  @VkProjects **"
     SAVED_THUMB = "Thumbnail Saved ✅ This Is Permanent"
     DEL_THUMB = "Thumbnail cleared succesfully!"
     NO_THUMB = "No thumbnails found!"
@@ -17,4 +21,4 @@ class script(object):
     
 1. Send me any Telegram File.
 2. Choose appropriate option."""
-
+    ABOUT_ME = """<b>Meh : \n An Telegram File Renamer Bot Which Can Rename A Telegram Files. \n You Can Set Permanent Thumbnail For The File So You Don't Have To Send Custom Thumbs All The Time.\n Feedback @VKP_BOTS If You Found Meh Useful</b>"""
