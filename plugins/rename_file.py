@@ -42,15 +42,15 @@ async def force_name(bot, message):
 async def cus_name(bot, message):
     if Config.UPDATE_CHANNEL:
         try:
-            user = await bot.get_chat_member(Config.UPDATE_CHANNEL, update.chat.id)
+            user = await bot.get_chat_member(Config.UPDATE_CHANNEL, message.chat.id)
             if user.status == "kicked":
               await bot.edit_message_text(text=script.BANNED_USER_TEXT, message_id=fmsg.message_id)
               return
         except UserNotParticipant:
-            await bot.edit_message_text(chat_id=update.chat.id, text=script.FORCE_SUBSCRIBE_TEXT, message_id=fmsg.message_id, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😎 Join Channel 😎", url=f"https://telegram.me/vkprojects")]]))
+            await bot.edit_message_text(chat_id=message.chat.id, text=script.FORCE_SUBSCRIBE_TEXT, message_id=fmsg.message_id, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😎 Join Channel 😎", url=f"https://telegram.me/vkprojects")]]))
             return
         except Exception:
-            await bot.edit_message_text(chat_id=update.chat.id, text=script.SOMETHING_WRONG, message_id=fmsg.message_id)
+            await bot.edit_message_text(chat_id=message.chat.id, text=script.SOMETHING_WRONG, message_id=fmsg.message_id)
             return
     if (message.reply_to_message.reply_markup) and isinstance(message.reply_to_message.reply_markup, ForceReply):
         asyncio.create_task(rename_doc(bot, message))     
