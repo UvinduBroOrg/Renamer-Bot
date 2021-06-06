@@ -25,14 +25,6 @@ from pyrogram.errors import UserNotParticipant
 from plugins.rename_file import rename_doc
 
 
-START_BUTTONS = InlineKeyboardMarkup(
-        [[
-        InlineKeyboardButton(text="Channel", url=f"https://telegram.me/VKPROJECTS"),
-        InlineKeyboardButton(text="Support", url=f"https://telegram.me/VKP_BOTS")
-        ]]
-    )
-
-
 @Client.on_message(filters.command(["help"]))
 def help_user(bot, update):
     bot.send_message(
@@ -54,21 +46,6 @@ def about(bot, update):
         disable_web_page_preview=True,
         reply_to_message_id=update.message_id
     )
-
-
-@Client.on_message(filters.command(["start"]))
-def send_start(bot, update):
-    # logger.info(update)
-    
-    bot.send_message(
-        chat_id=update.chat.id,
-        text=script.START_TEXT.format(update.from_user.first_name),
-        reply_markup= START_BUTTONS,
-        parse_mode="html",
-        disable_web_page_preview=True,
-        reply_to_message_id=update.message_id
-    )
-
 
 @Client.on_message(filters.command(["upgrade"]))
 def upgrade(bot, update):
