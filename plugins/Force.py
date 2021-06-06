@@ -26,6 +26,12 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 from pyrogram.types import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant, UserBannedInChannel 
 
+START_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton(text="Channel", url=f"https://telegram.me/VKPROJECTS"),
+        InlineKeyboardButton(text="Support", url=f"https://telegram.me/VKP_BOTS")
+        ]]
+    )
 
 @Bot.on_message(pyrogram.filters.command(["start"]))
 async def text(bot, update):
