@@ -14,7 +14,7 @@ async def cb_handler(bot, update):
         return
 
     elif query.data == "help":
-        await query.answer()
+        await update.answer()
         keyboard = InlineKeyboardMarkup(
             [[
             InlineKeyboardButton("About 🤖", callback_data="about"),
@@ -22,7 +22,7 @@ async def cb_handler(bot, update):
             ]]
       )
 
-        await query.message.edit_text(
+        await update.message.edit_text(
             Script.HELP_MSG,
             reply_markup=keyboard,
             disable_web_page_preview=True
@@ -30,7 +30,7 @@ async def cb_handler(bot, update):
         return
 
     elif query.data == "about":
-        await query.answer()
+        await update.answer()
         keyboard = InlineKeyboardMarkup(
             [[
             InlineKeyboardButton("🤔 How To Use", callback_data="help"),
@@ -38,7 +38,7 @@ async def cb_handler(bot, update):
             ]]
       )
 
-        await query.message.edit_text(
+        await update.message.edit_text(
             Script.ABOUT_MSG,
             reply_markup=keyboard,
             disable_web_page_preview=True
@@ -46,7 +46,7 @@ async def cb_handler(bot, update):
         return
 
     elif query.data == "close_data":
-        await query.message.delete()
+        await update.message.delete()
 
         
     elif "cancel_e" in update.data:
