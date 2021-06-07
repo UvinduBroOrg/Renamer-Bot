@@ -16,7 +16,7 @@ else:
     from config import Config
 
 # the Strings used for this "thing"
-from sript import Script
+from script import script
 
 import pyrogram
 from pyrogram import filters
