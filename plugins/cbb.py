@@ -30,8 +30,6 @@ async def cb_handler(bot, update):
     elif query.data == "help":
         await update.answer()
         keyboard = InlineKeyboardMarkup(STJJJ_BUTTONS)
-            
-
         await update.message.edit_text(
             Script.HELP_MSG,
             reply_markup=keyboard,
@@ -42,8 +40,6 @@ async def cb_handler(bot, update):
     elif query.data == "about":
         await update.answer()
         keyboard = InlineKeyboardMarkup(STOOO_BUTTONS)
-            
-
         await update.message.edit_text(
             Script.ABOUT_MSG,
             reply_markup=keyboard,
