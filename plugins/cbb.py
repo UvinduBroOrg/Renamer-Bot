@@ -23,27 +23,24 @@ async def cb_handler(bot, update):
         await update.message.delete()
         await force_name(bot, update.message)
         )
-        return
 
     elif update.data == "help":
         await update.answer()
         keyboard = InlineKeyboardMarkup(helpbutton)
         await update.message.edit_text(
-            Script.HELP_MSG,
+            text=Script.HELP_MSG,
             reply_markup=keyboard,
             disable_web_page_preview=True
         )
-        return
 
     elif update.data == "about":
         await update.answer()
         keyboard = InlineKeyboardMarkup(aboutbutton)
         await update.message.edit_text(
-            Script.ABOUT_MSG,
+            text=Script.ABOUT_MSG,
             reply_markup=keyboard,
             disable_web_page_preview=True
         )
-        return
 
     elif update.data == "close_data":
         await update.message.delete()
