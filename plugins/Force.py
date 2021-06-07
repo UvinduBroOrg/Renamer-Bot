@@ -16,7 +16,7 @@ else:
     from config import Config
 
 # the Strings used for this "thing"
-from translation import Translation
+from sript import Script
 
 import pyrogram
 from pyrogram import filters
@@ -55,7 +55,7 @@ async def text(bot, update):
             )
             return
         else:
-            await update.reply_text(Translation.START_TEXT.format(update.from_user.first_name),
+            await update.reply_text(Script.START_TEXT.format(update.from_user.first_name),
         reply_markup= START_BUTTONS,
         parse_mode="html",
         disable_web_page_preview=True,
