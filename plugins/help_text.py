@@ -62,7 +62,26 @@ def upgrade(bot, update):
     
 @Client.on_message(filters.private & (filters.document | filters.video | filters.audio | filters.voice | filters.video_note))
 async def rename_cb(bot, update):
- 
+    if update.from_user.id in Config.BANNED_USERS:
+        await update.reply_text("You are Banned")
+        return
+    update_channel = Config.UPDATE_CHANNEL
+    if update_channel:
+        try:
+            user = await bot.get_chat_member(update_channel, update.chat.id)
+            if user.status == "kicked":
+               await update.reply_text(" Sorry, You are **B A N N E D**")
+               return
+        except UserNotParticipant:
+            #await update.reply_text(f"Join @{update_channel} To Use Me")
+            await update.reply_text(
+                text="**Please Join My Update Channel Before Using Me..**",
+                reply_markup=InlineKeyboardMarkup([
+                    [ InlineKeyboardButton(text="Join My Updates Channel", url=f"https://t.me/{update_channel}")]
+              ])
+            )
+            return
+        else:
     file = update.document or update.video or update.audio or update.voice or update.video_note
     try:
         filename = file.file_name
