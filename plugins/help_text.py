@@ -85,7 +85,7 @@ async def rename_cb(bot, update):
     try:
         filename = file.file_name
     except:
-        filename = "Not Available"
+        await bot.send_message(
         chat_id=update.chat.id,
         text="<b>File Name</b> : <code>{}</code> \n\nSelect the desired option below 😇".format(filename),
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="📝 RENAME 📝", callback_data="rename_button")],
