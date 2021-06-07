@@ -3,6 +3,20 @@ import pyrogram
 from plugins.help_text import rename_cb, cancel_extract
 from plugins.rename_file import force_name
 
+STJJJ_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton("About 🤖", callback_data="about"),
+        InlineKeyboardButton("Close 🔐", callback_data="close")
+        ]]
+    )
+
+STOOO_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton("🤔 How To Use", callback_data="help"),
+        InlineKeyboardButton("Close 🔐", callback_data="close")
+        ]]
+    )
+
 
 @pyrogram.Client.on_callback_query()
 async def cb_handler(bot, update):
@@ -15,12 +29,8 @@ async def cb_handler(bot, update):
 
     elif query.data == "help":
         await update.answer()
-        keyboard = InlineKeyboardMarkup(
-            [[
-            InlineKeyboardButton("About 🤖", callback_data="about"),
-            InlineKeyboardButton("Close 🔐", callback_data="close")
-            ]]
-        )
+        keyboard = InlineKeyboardMarkup(STJJJ_BUTTONS)
+            
 
         await update.message.edit_text(
             Script.HELP_MSG,
@@ -31,12 +41,8 @@ async def cb_handler(bot, update):
 
     elif query.data == "about":
         await update.answer()
-        keyboard = InlineKeyboardMarkup(
-            [[
-            InlineKeyboardButton("🤔 How To Use", callback_data="help"),
-            InlineKeyboardButton("Close 🔐", callback_data="close")
-            ]]
-        )
+        keyboard = InlineKeyboardMarkup(STOOO_BUTTONS)
+            
 
         await update.message.edit_text(
             Script.ABOUT_MSG,
