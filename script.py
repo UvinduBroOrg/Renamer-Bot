@@ -2,9 +2,7 @@ class script(object):
     START_TEXT = """ <b>Hai {}!!!.
 I am Simple Rename Bot!😌</b>
 
-<code>You can rename any Telegram Document, using this bot! With Permenant Thumbnail</code>
-
-<b>» You Must Join My Updates Channel for using me</b>
+<code>You can rename any Telegram Document, using this bot! With Permenant Thumbnail 💯.</code>
 """
 
     RENAME_403_ERR = "What Are You Doing? You are Banned"
@@ -25,6 +23,8 @@ I am Simple Rename Bot!😌</b>
 <b>Credits:</b> Dan for his awesome pyrogram library 🔥
 <b>Library:</b> <a href="https://docs.pyrogram.org/">Pyrogram 1.1.13</a>
 <b>Updates:</b> <a href="https://t.me/VkProjects">vk projects</a>
-<b>Server:</b> <a href="https://heroku.com">Heroku</a>"""
+<b>Server:</b> <a href="https://heroku.com">Heroku</a>
+
+<b><u>NB:</u> EveryOne Can Use Me.So Don't Worry🤗"""
     FORCE_SUBSCRIBE_TEXT = "<code>Sorry Dear You Must Join My Updates Channel for using me 😌😉....</code>"
     SOMETHING_WRONG = "<code>Something Wrong. Try again.</code>"
