@@ -25,6 +25,6 @@ I am Simple Rename Bot!😌</b>
 <b>Updates:</b> <a href="https://t.me/VkProjects">vk projects</a>
 <b>Server:</b> <a href="https://heroku.com">Heroku</a>
 
-<b><u>NB:</u> EveryOne Can Use Me.So Don't Worry🤗"""
+<b><u>NB:</u></b> EveryOne Can Use Me.So Don't Worry🤗"""
     FORCE_SUBSCRIBE_TEXT = "<code>Sorry Dear You Must Join My Updates Channel for using me 😌😉....</code>"
     SOMETHING_WRONG = "<code>Something Wrong. Try again.</code>"
