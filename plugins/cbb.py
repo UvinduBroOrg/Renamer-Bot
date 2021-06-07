@@ -25,7 +25,7 @@ async def cb_handler(bot, update):
         )
         return
 
-    elif query.data == "help":
+    elif update.data == "help":
         await update.answer()
         keyboard = InlineKeyboardMarkup(helpbutton)
         await update.message.edit_text(
@@ -35,7 +35,7 @@ async def cb_handler(bot, update):
         )
         return
 
-    elif query.data == "about":
+    elif update.data == "about":
         await update.answer()
         keyboard = InlineKeyboardMarkup(aboutbutton)
         await update.message.edit_text(
@@ -45,7 +45,7 @@ async def cb_handler(bot, update):
         )
         return
 
-    elif query.data == "close_data":
+    elif update.data == "close_data":
         await update.message.delete()
 
         
