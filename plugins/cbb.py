@@ -22,7 +22,6 @@ async def cb_handler(bot, update):
     if "rename_button" in update.data:
         await update.message.delete()
         await force_name(bot, update.message)
-        )
 
     elif update.data == "help":
         await update.answer()
