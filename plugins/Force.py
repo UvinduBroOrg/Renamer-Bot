@@ -28,8 +28,10 @@ from pyrogram.errors import UserNotParticipant, UserBannedInChannel
 
 START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton(text="Channel", url=f"https://telegram.me/VKPROJECTS"),
-        InlineKeyboardButton(text="Support", url=f"https://telegram.me/VKP_BOTS")
+        InlineKeyboardButton(text="🤔 How To Use", callback_data="help"),
+        InlineKeyboardButton(text="🤖 About", callback_data="about"),
+        ],[
+        InlineKeyboardButton(text="Close 🔐", callback_data="close")
         ]]
     )
 
