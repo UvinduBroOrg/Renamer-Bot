@@ -12,7 +12,7 @@ helpbutton = [[
 
 aboutbutton = [[
         InlineKeyboardButton(f'🤔 How To Use', callback_data='help'),
-        InlineKeyboardButton(f'Close 🔐', callback_data='close')
+        InlineKeyboardButton(f'Close 🔐', callback_data='close_data')
     ]]
 
 
