@@ -20,7 +20,7 @@ async def cb_handler(bot, update):
             InlineKeyboardButton("About 🤖", callback_data="about"),
             InlineKeyboardButton("Close 🔐", callback_data="close")
             ]]
-        )
+      )
 
         await query.message.edit_text(
             Script.HELP_MSG,
@@ -36,7 +36,7 @@ async def cb_handler(bot, update):
             InlineKeyboardButton("🤔 How To Use", callback_data="help"),
             InlineKeyboardButton("Close 🔐", callback_data="close")
             ]]
-        )
+      )
 
         await query.message.edit_text(
             Script.ABOUT_MSG,
