@@ -3,7 +3,6 @@ logger = logging.getLogger(__name__)
 
 import datetime
 
-from script import Script
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import UserNotParticipant, ChatAdminRequired, UsernameNotOccupied
