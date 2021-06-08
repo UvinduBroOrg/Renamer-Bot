@@ -3,6 +3,7 @@ logger = logging.getLogger(__name__)
 
 import datetime
 
+if bool(os.environ.get("WEBHOOK", False)):
     from sample_config import config
 else:
     from config import Config
