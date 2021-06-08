@@ -1,6 +1,7 @@
 import logging
 logger = logging.getLogger(__name__)
 
+import os
 import datetime
 
 if bool(os.environ.get("WEBHOOK", False)):
