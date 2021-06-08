@@ -15,18 +15,18 @@ I am Simple Rename Bot!😌</b>
     NO_THUMB = "No thumbnails found!"
     SAVED_RECVD_DOC_FILE = "File Downloaded Successfully 😎"
     CUSTOM_CAPTION_UL_FILE = " "
-    HELP_USER = """**Need Help 🤔**
+    HELP_USER = """<b>Need Help 🤔</b>
 
-**For Rename File**
+<b>For Rename File</b>
    
-1.Send me any Telegram File.
-2. Choose appropriate option.
+<b>1.</b>Send me any Telegram File.
+<b>2.</b> Choose appropriate option.
 
-For Thumbnail
+<b>For Thumbnail</b>
 
-1. Sent A Photo To Set As Thumnail.
-2. /showthumb To See Your Current Thumbnail.
-3. /delthumb To Delete Your Current Thumbnail.
+<b>1.</b> Sent A Photo To Set As Thumnail.
+<b>2.</b> /showthumb To See Your Current Thumbnail.
+<b>3.</b> /delthumb To Delete Your Current Thumbnail.
 """
     ABOUT_ME = """ <b>Creator:</b> <a href="https://t.me/VivekTVP">Vivek</a>
 <b>Credits:</b> Dan for his awesome pyrogram library 🔥
