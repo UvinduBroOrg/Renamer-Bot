@@ -2,7 +2,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 import datetime
-from ..config import Config
+from config import Config
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import UserNotParticipant, ChatAdminRequired, UsernameNotOccupied
