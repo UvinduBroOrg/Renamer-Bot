@@ -32,7 +32,7 @@ async def cb_handler(bot, update):
         await update.answer()
         keyboard = InlineKeyboardMarkup(helpbutton)
         await update.message.edit_text(
-            text=script.HELP_MSG,
+            text=script.HELP_USER,
             reply_markup=keyboard,
             disable_web_page_preview=True
         )
@@ -41,7 +41,7 @@ async def cb_handler(bot, update):
         await update.answer()
         keyboard = InlineKeyboardMarkup(aboutbutton)
         await update.message.edit_text(
-            text=script.ABOUT_MSG,
+            text=script.ABOUT_ME,
             reply_markup=keyboard,
             disable_web_page_preview=True
         )
