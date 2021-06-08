@@ -2,7 +2,9 @@ class script(object):
     START_TEXT = """ <b>Hai {}!!!.
 I am Simple Rename Bot!😌</b>
 
-You can rename any Telegram Document, using this bot! With Permenant Thumbnail 💯.
+<code>You can rename any Telegram Document, using this bot! With Permenant Thumbnail 💯.</code>
+
+<s>For More Details check Help 📜</s>
 """
 
     RENAME_403_ERR = "What Are You Doing? You are Banned"
