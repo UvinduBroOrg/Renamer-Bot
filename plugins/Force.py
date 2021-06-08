@@ -4,8 +4,6 @@ logger = logging.getLogger(__name__)
 import datetime
 
 from sample_config import Config
-else:
-    from config import Config
 
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
