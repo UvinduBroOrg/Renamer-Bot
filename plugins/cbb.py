@@ -4,10 +4,10 @@ from plugins.help_text import rename_cb, cancel_extract
 from plugins.rename_file import force_name
 
 helpbutton = [[
-        InlineKeyboardButton(f'Channel', url='https://t.me/VKPROJECTS'),
-        InlineKeyboardButton(f'Support', url='https://t.me/VKP_BOTS')
+        InlineKeyboardButton(f'Channel', url="https://t.me/VKPROJECTS"),
+        InlineKeyboardButton(f'Support', url="https://t.me/VKP_BOTS")
         ],[
-        InlineKeyboardButton(f'{INFORMATION} Help', callback_data="help")
+        InlineKeyboardButton(f'{ROBOT} About', callback_data="about")
     ]]
 
 aboutbutton = [[
