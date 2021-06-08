@@ -5,7 +5,7 @@ from plugins.rename_file import force_name
 from pyrogram import Client as pyrogram, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ForceReply
 from pyrogram.errors import UserNotParticipant
-import script
+from script import script
 
 helpbutton = [[
         InlineKeyboardButton(f'Channel', url="https://t.me/VKPROJECTS"),
