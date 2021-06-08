@@ -19,7 +19,7 @@ aboutbutton = [[
     ]]
 
 
-@pyrogram.Client.on_callback_query()
+@pyrogram.on_callback_query()
 async def cb_handler(bot, update):
         
     if "rename_button" in update.data:
