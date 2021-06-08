@@ -10,7 +10,7 @@ helpbutton = [[
         InlineKeyboardButton(f'Channel', url="https://t.me/VKPROJECTS"),
         InlineKeyboardButton(f'Support', url="https://t.me/VKP_BOTS")
         ],[
-        InlineKeyboardButton(f'{ROBOT} About', callback_data="about")
+        InlineKeyboardButton(f'🤖 About', callback_data="about")
     ]]
 
 aboutbutton = [[
