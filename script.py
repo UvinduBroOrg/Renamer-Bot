@@ -4,7 +4,7 @@ I am Simple Rename Bot!😌</b>
 
 <code>You can rename any Telegram Document, using this bot! With Permenant Thumbnail 💯.</code>
 
-<s>For More Details check Help 📜</s>
+<u>For More Details check Help 📜</u>
 """
 
     RENAME_403_ERR = "What Are You Doing? You are Banned"
