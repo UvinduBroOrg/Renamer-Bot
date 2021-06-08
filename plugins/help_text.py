@@ -26,7 +26,7 @@ from plugins.rename_file import rename_doc
 
 START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton(text="🤔 How To Use", callback_data="help"),
+        InlineKeyboardButton(text="⚙️ Help", callback_data="help"),
         InlineKeyboardButton(text="🤖 About", callback_data="about"),
         ],[
         InlineKeyboardButton(text="Close 🔐", callback_data="close")
